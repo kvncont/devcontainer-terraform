@@ -1,4 +1,4 @@
-#!\bin\bash
+#!/bin/bash
 
 echo -e "<<<<<<<<<< Git >>>>>>>>>>"
 git version
@@ -18,3 +18,5 @@ echo -e "\n<<<<<<<<<< Helm >>>>>>>>>>"
 helm version
 echo -e "\n<<<<<<<<<< Minikube >>>>>>>>>>"
 minikube version
+echo -e "\n<<<<<<<<<< Container Env Var >>>>>>>>>>"
+echo "$MY_SUPER_ENV_VAR"
