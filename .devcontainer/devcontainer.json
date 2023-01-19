@@ -1,41 +1,42 @@
 {
-	"name": "Terraform Lab",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-	"workspaceFolder": "/workspaces/devcontainer-terraform",
-	"containerEnv": {
-		"MY_SUPER_ENV_VAR": "Hello World"
-	},
-	"features": {
-		"ghcr.io/devcontainers/features/azure-cli:1": {},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-		"ghcr.io/devcontainers/features/terraform:1": {},
-		"ghcr.io/dhoeric/features/terraform-docs:1": {},
-		"ghcr.io/dhoeric/features/tfsec:1": {}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"azapi-vscode.azapi",
-				"hashicorp.terraform",
-				"ms-vscode-remote.vscode-remote-extensionpack",
-				"tfsec.tfsec",
-				"trunk.io"
-			],
-			"settings": {
-				"editor.bracketPairColorization.enabled": true,
-				"editor.insertSpaces": true,
-				"editor.tabSize": 2,
-				"files.encoding": "utf8",
-				"terminal.integrated.scrollback": 20000
-			}
-		}
-	},
-	"mounts": [
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
-	],
-	"remoteUser": "vscode",
-	"postCreateCommand": "bash .devcontainer/scripts/show-tools-versions.sh"
+  "name": "Terraform Lab",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "workspaceFolder": "/workspaces/devcontainer-terraform",
+  "containerEnv": {
+    "MY_SUPER_ENV_VAR": "Hello World"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/dhoeric/features/terraform-docs:1": {},
+    "ghcr.io/dhoeric/features/tfsec:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "azapi-vscode.azapi",
+        "hashicorp.terraform",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "tfsec.tfsec",
+        "trunk.io"
+      ],
+      "settings": {
+        "editor.bracketPairColorization.enabled": true,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "files.encoding": "utf8",
+        "terminal.integrated.scrollback": 20000
+      }
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ],
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash .devcontainer/scripts/show-tools-versions.sh"
 }
